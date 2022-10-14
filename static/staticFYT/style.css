@@ -1,4 +1,4 @@
-p {
+p{
   font-family:Roboto;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -54,7 +54,7 @@ body{
 }
 .video-box-avatar{
   min-width: 36px !important;
-  width:10%;
+  width:15%;
   display: inline-block;
   vertical-align:top; 
 }
