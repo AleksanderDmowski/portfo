@@ -62,10 +62,10 @@ def shorter(link):
             return str(dict(txt_dict).get(link))
         else:
             id_ = random.randint(id_start, id_end)
-            x = (f'http://127.0.0.1:5000/linkShorter/{id_}')
+            x = (f'https://www.aleksanderdmowski.com/linkShorter/{id_}')
             while x in txt_dict.values():
                 id_ = random.randint(id_start, id_end)
-                x = (f'http://127.0.0.1:5000/linkShorter/{id_}')
+                x = (f'https://www.aleksanderdmowski.com/linkShorter/{id_}')
             database.write(
                 f'{link} {x}\n')
             txt_dict.update({link: x})
@@ -78,7 +78,7 @@ def go_to(id_db):
         for line in database:
             (k, v) = line.split()
 
-            if ('http://127.0.0.1:5000/linkShorter/'+id_db) == v:
+            if ('https://www.aleksanderdmowski.com/linkShorter/'+id_db) == v:
                 return redirect(k)
     return 'something wrong'
 
